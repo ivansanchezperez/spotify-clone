@@ -1,14 +1,18 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css';
+import { AnimatePresence } from 'framer-motion';
+import Home from './pages/Home/Home.tsx';
+import Settings from './pages/Settings/Settings.tsx';
+
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
