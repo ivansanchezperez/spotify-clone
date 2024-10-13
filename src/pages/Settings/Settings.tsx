@@ -1,8 +1,8 @@
-import withTransition from "../../HOC/withTransition";
+import withTransition from '../../HOC/withTransition';
 
 function Settings() {
   return (
-    <div className="p-3">
+    <div>
       <h1>Settings</h1>
     </div>
   );
